@@ -1,0 +1,45 @@
+{
+  "name": "novel2motion-desktop",
+  "version": "0.1.0",
+  "description": "Novel to motion anime video generation studio for desktop",
+  "main": "./dist/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsup src/main.ts src/preload.ts --format esm,cjs",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.novel2motion.studio",
+    "productName": "Novel2Motion Studio",
+    "copyright": "Copyright © 2026 novel2motion",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "tar.gz"
+      ],
+      "category": "AudioVideo",
+      "synopsis": "Novel to motion anime video generation studio"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.video"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "novel2motion",
+  "version": "0.1.0",
+  "description": "Novel to motion anime video generation engine powered by Node.js, Three.js, kvdb-sdk and node-task-runtime",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "novel2motion": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "cli": "tsx src/cli.ts",
+    "render:preview": "tsx src/cli.ts render examples/animation-quality.txt -o output/animation_quality.mp4 --width 1280 --height 720 --fps 30",
+    "render:avatar-demo": "tsx src/cli/avatar-demo.ts"
+  },
+  "dependencies": {
+    "kvdb-sdk": "github:xzsean666/kvdb-nodejs#89040274713ecc86863e8d47963f8f8d92f5f388",
+    "node-task-runtime": "github:xzsean666/NodeJS-Task-Runtime#1ae1577e5bfd759f0ed0a55433e80f136116ee66",
+    "better-sqlite3": "^13.0.3",
+    "three": "^0.174.0",
+    "zod": "^3.24.2",
+    "commander": "^13.1.0",
+    "sharp": "^0.33.5",
+    "@napi-rs/canvas": "^1.0.10",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.9",
+    "@types/three": "^0.174.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

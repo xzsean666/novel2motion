@@ -1,0 +1,14 @@
+packages:
+  - "."
+
+onlyBuiltDependencies:
+  - better-sqlite3
+  - esbuild
+  - sharp
+
+allowBuilds:
+  better-sqlite3: true
+  esbuild: true
+  kvdb-sdk@https://codeload.github.com/xzsean666/kvdb-nodejs/tar.gz/89040274713ecc86863e8d47963f8f8d92f5f388: true
+  node-task-runtime@https://codeload.github.com/xzsean666/NodeJS-Task-Runtime/tar.gz/1ae1577e5bfd759f0ed0a55433e80f136116ee66: true
+  sharp: true
