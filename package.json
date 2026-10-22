@@ -19,7 +19,7 @@
     "render:avatar-demo": "tsx src/cli/avatar-demo.ts"
   },
   "dependencies": {
-    "kvdb-sdk": "github:xzsean666/kvdb-nodejs#89040274713ecc86863e8d47963f8f8d92f5f388",
+    "kvdb-sdk": "git+https://github.com/xzsean666/kvdb-nodejs.git#529e88c003f5e75744bd663211019d7f17c3b912",
     "node-task-runtime": "github:xzsean666/NodeJS-Task-Runtime#1ae1577e5bfd759f0ed0a55433e80f136116ee66",
     "better-sqlite3": "^13.0.3",
     "three": "^0.174.0",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.12",
-    "@types/node": "^22.13.9",
+    "@types/node": "^26.6.5",
     "@types/three": "^0.174.0",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
